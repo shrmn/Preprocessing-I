@@ -58,11 +58,19 @@ table {
     box-sizing: border-box;
 }
 
+// global styles
+
 html, body {
 		height: 100%;
+	/* 10px if the browser was 16px*/
+  /* 1rem = 10px @ medium*/
+  font-size: 62.5%;
 }
 
 // variables
+
+@left-color: #4592b1;
+@right-color: black;
 
 // mix-ins
 
@@ -70,6 +78,10 @@ html, body {
 	display: flex;
 	flex-direction: @direction;
   justify-content: @justify;
+}
+
+.bordered(@color) {
+	border-bottom: 1px solid @color;
 }
 
 // main css
@@ -80,8 +92,11 @@ html, body {
 	flex-wrap: wrap;
 	justify-content: center;
 	// align-items: center;
-	width: 800px;
+	max-width: 1000px;
+	height: 100%;
 	margin: 0 auto;
+	line-height: 1.25;
+	font-size: 1.6rem;
 }
 
 // navigation
@@ -89,14 +104,14 @@ html, body {
 .navigation {
 	.custom-layout(row, flex-end);
 	width: 99%;
-	padding: 0 20px;
+	padding: 0 2rem;
 	background-color: lightblue;
 
 	nav {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 10px 0;
+		margin: 1rem 0;
 		width: 40%;
 		
 		a {
@@ -112,55 +127,100 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	background-color: green;
+	background-color: #267391;
 	width: 33%;
 	height: 100%;
 
 	// headshot
-	img {
+	.headshot {
+		display:block;
+		position: relative;
+		padding: 2rem;
 		width: 100%;
+		height: 25%;
+		.bordered(@left-color);
+
+		img {
+			display: block;
+			margin: 1rem auto;
+			border-radius: 100%;
+			width: 100%;
+		}
+	}
+// about me & social media
+	.content-block {
+		margin-top: 1rem;
+		padding: 1.5rem;
+		width: 100%;		
+		.bordered(@left-color);
+		
 	}
 }
 
 // right-side
 
 .right-side {
+	background-color: aliceblue;
+	.custom-layout(column, space-between);
 	width: 66%;
-	background-color: gray;
+	height: 100%
+	
 }
 
 	// header
 
 header {
-	background-color: lightgray;
+	.custom-layout(row, space-between);
+	margin: 1rem;
+	padding: 1rem 2rem;
+	.bordered(@right-color);
+	
+
+	.content-block {
+		li {
+		line-height: 1.5;
+		}
+	}
 }
+
+	h1 {
+		font-size: 4rem;
+	}
 
 		// contact
 
+
+
 	// main
+
+	.main {
+		.custom-layout(column, space-between);
+		margin: 2rem 1rem;
+
+	}
 
 		// work history
 
 .work-history {
-	background-color: lavender;
+	
 }
 
 		// education
 
 .education {
-	background-color: lightgoldenrodyellow;
+	
 }
 
 		// skills
 
 .skills {
-	background-color: blanchedalmond;
+	
 }
 
 		// footer
 
 footer {
 	.custom-layout(row, flex-end);
-	margin: 10px 0;
-	padding: 10px 20px;
+	margin-top: 1rem;
+	padding: 1rem 2rem;
 }

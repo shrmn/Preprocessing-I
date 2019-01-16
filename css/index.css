@@ -136,28 +136,34 @@ table {
 html,
 body {
   height: 100%;
+  /* 10px if the browser was 16px*/
+  /* 1rem = 10px @ medium*/
+  font-size: 62.5%;
 }
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 800px;
+  max-width: 1000px;
+  height: 100%;
   margin: 0 auto;
+  line-height: 1.25;
+  font-size: 1.6rem;
 }
 .navigation {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   width: 99%;
-  padding: 0 20px;
+  padding: 0 2rem;
   background-color: lightblue;
 }
 .navigation nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 1rem 0;
   width: 40%;
 }
 .navigation nav a {
@@ -168,33 +174,62 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: green;
+  background-color: #267391;
   width: 33%;
   height: 100%;
 }
-.intro img {
+.intro .headshot {
+  display: block;
+  position: relative;
+  padding: 2rem;
+  width: 100%;
+  height: 25%;
+  border-bottom: 1px solid #4592b1;
+}
+.intro .headshot img {
+  display: block;
+  margin: 1rem auto;
+  border-radius: 100%;
   width: 100%;
 }
+.intro .content-block {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  border-bottom: 1px solid #4592b1;
+}
 .right-side {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 66%;
-  background-color: gray;
+  height: 100%;
 }
 header {
-  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid black;
 }
-.work-history {
-  background-color: lavender;
+header .content-block li {
+  line-height: 1.5;
 }
-.education {
-  background-color: lightgoldenrodyellow;
+h1 {
+  font-size: 4rem;
 }
-.skills {
-  background-color: blanchedalmond;
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 1rem;
 }
 footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 10px 0;
-  padding: 10px 20px;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
 }
