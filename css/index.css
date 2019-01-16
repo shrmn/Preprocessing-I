@@ -138,19 +138,31 @@ body {
   height: 100%;
 }
 .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 800px;
   margin: 0 auto;
 }
 nav {
-  display: block;
-  width: 100%;
+  width: 99%;
   text-decoration: none;
   background-color: lightblue;
 }
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   background-color: green;
+  width: 33%;
+  height: 100%;
+}
+.intro img {
+  width: 100%;
 }
 .right-side {
+  width: 66%;
   background-color: gray;
 }
 header {

@@ -63,9 +63,10 @@ html, body {
 }
 
 .container {
-	// display: flex;
-	// flex-direction: row;
-	// justify-content: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 	// align-items: center;
 	width: 800px;
 	margin: 0 auto;
@@ -74,8 +75,7 @@ html, body {
 // navigation
 
 nav {
-	display: block;
-	width: 100%;
+	width: 99%;
 	text-decoration: none;
 	background-color: lightblue;
 }
@@ -83,41 +83,52 @@ nav {
 // intro
 
 .intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 	background-color: green;
-}
+	width: 33%;
+	height: 100%;
 
 	// headshot
+	img {
+		width: 100%;
+	}
+}
 
 // right-side
 
 .right-side {
+	width: 66%;
 	background-color: gray;
 }
 
-// header
+	// header
 
 header {
 	background-color: lightgray;
 }
 
-	// contact
+		// contact
 
-// main
+	// main
 
-// work history
+		// work history
 
 .work-history {
 	background-color: lavender;
 }
 
-// education
+		// education
 
 .education {
 	background-color: lightgoldenrodyellow;
 }
 
-// skills
+		// skills
 
 .skills {
 	background-color: blanchedalmond;
 }
+
+		// footer
