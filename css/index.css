@@ -2,6 +2,9 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+.help {
+  border: 1px solid red;
+}
 html,
 body,
 div,
@@ -133,4 +136,32 @@ table {
 html,
 body {
   height: 100%;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+nav {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background-color: lightblue;
+}
+.intro {
+  background-color: green;
+}
+.right-side {
+  background-color: gray;
+}
+header {
+  background-color: lightgray;
+}
+.work-history {
+  background-color: lavender;
+}
+.education {
+  background-color: lightgoldenrodyellow;
+}
+.skills {
+  background-color: blanchedalmond;
 }
