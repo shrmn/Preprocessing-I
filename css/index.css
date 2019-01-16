@@ -145,10 +145,23 @@ body {
   width: 800px;
   margin: 0 auto;
 }
-nav {
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   width: 99%;
-  text-decoration: none;
+  padding: 0 20px;
   background-color: lightblue;
+}
+.navigation nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+  width: 40%;
+}
+.navigation nav a {
+  text-decoration: none;
 }
 .intro {
   display: flex;
@@ -176,4 +189,9 @@ header {
 }
 .skills {
   background-color: blanchedalmond;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

@@ -74,10 +74,27 @@ html, body {
 
 // navigation
 
-nav {
+.navigation {
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 	width: 99%;
-	text-decoration: none;
+	padding: 0 20px;
 	background-color: lightblue;
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 20px 0;
+		width: 40%;
+		
+		a {
+			
+			text-decoration: none;
+		}
+	}
 }
 
 // intro
@@ -132,3 +149,9 @@ header {
 }
 
 		// footer
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
