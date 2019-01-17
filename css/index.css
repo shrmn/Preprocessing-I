@@ -149,7 +149,7 @@ h3 {
 }
 ul {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 .container {
@@ -188,7 +188,7 @@ ul {
   justify-content: flex-start;
   background-color: #4b8faa;
   width: 33%;
-  height: 100vh;
+  height: 100%;
 }
 .intro .headshot {
   display: block;
