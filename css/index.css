@@ -295,6 +295,22 @@ header .content-block li {
   margin: 1rem 0;
   width: 66%;
 }
+@media (max-width: 500px) {
+  .main .organization {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .main .organization .organization {
+    border-bottom: 1px solid black;
+  }
+  .main .organization .org-name {
+    width: 100%;
+  }
+  .main .organization .org-description {
+    width: 100%;
+  }
+}
 .main .work-history {
   margin: 1rem 1rem 1rem 0;
   padding: 1.5rem;

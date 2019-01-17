@@ -215,6 +215,7 @@ ul {
 	flex-direction: column;
 	justify-content: flex-start;	
 	width: 100%;
+	// background-color: #6fb5d1;
 
 // about me & social media
 	.content-block {
@@ -283,6 +284,19 @@ ul {
 				margin: 1rem 0;
 				width: 66%;
 				}
+
+			@media (max-width: 500px) {				
+				.custom-layout(column, space-evenly);
+				.organization {
+					.bordered(black);
+				}
+				.org-name {
+					width: 100%;					
+				}
+				.org-description {
+					width: 100%;
+				}
+			}
 		}
 	
 
