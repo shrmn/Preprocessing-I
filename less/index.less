@@ -1,8 +1,10 @@
 // Is this working?
+// IDK is it?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -53,7 +55,305 @@ table {
     box-sizing: border-box;
 }
 
+// global styles
+
 html, body {
-    height: 100%;
+		height: 100%;
+	/* 10px if the browser was 16px*/
+  /* 1rem = 10px @ medium*/
+	font-size: 62.5%;
+	font-family: @default-fonts;
 }
 
+
+h1 {
+	font-size: 6rem;
+	font-family: Roboto, sans-serif;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+}
+
+h4 {
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+}
+
+ul {
+	
+}
+
+// variables
+
+@left-color: #6fb5d1;
+@right-color: black;
+@default-fonts: 'Open Sans', sans-serif;
+
+// mix-ins
+
+.custom-layout(@direction, @justify) {
+	display: flex;
+	flex-direction: @direction;
+  justify-content: @justify;
+}
+
+.bordered(@color) {
+	border-bottom: 1px solid @color;
+}
+
+.default-spacing() {
+	margin: 1rem 1rem 1rem 0;
+	padding: 1.5rem;
+}
+
+.help() {
+	border: 1px solid red;
+}
+
+// main css
+
+.container {
+	display: block;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	// align-items: center;
+	max-width: 800px;
+	height: 100%;
+	margin: 0 auto;
+	line-height: 1.25;
+	font-size: 1.6rem;
+
+	@media (max-width: 500px) {
+		max-width: 495px;
+	}
+}
+
+// navigation
+
+.navigation {
+	.custom-layout(row, flex-end);
+	width: 100%;
+	padding: 0 2rem;
+	background-color: lightblue;
+
+	nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 1rem 0;
+		width: 40%;
+		
+		a {
+			color: black;
+			text-decoration: none;
+		}
+
+		a:hover {
+			font-size: 2rem;
+		}
+	}
+	@media (max-width: 500px) {
+		.custom-layout(row, center);
+
+		nav {
+			width: 80%;
+		}
+	}
+
+}
+
+	// header
+
+	header {
+		.custom-layout(row, space-evenly);
+		align-items: center;		
+		.bordered(@right-color);
+		background-color: #4b8faa;
+
+			// headshot
+		.headshot {
+			// display:block;
+			position: relative;
+			padding: 2rem;
+			width: 50%;
+			// height: 25%;
+			// .bordered(@left-color);
+
+			img {
+				display: block;
+				margin: 1rem auto;
+				border-radius: 50%;
+				width: 100%;
+				.bordered(@left-color);
+			}
+		}
+
+		.content-block {
+			h1 {
+				line-height: 1;
+				// color: #4b8faa;
+			}
+			li {
+			line-height: 1.5;
+			}
+		}
+
+		@media (max-width: 500px) {
+			.custom-layout(column, space-evenly);
+
+			.content-block {
+				.custom-layout(column, center);
+				align-items: center;
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+// intro
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;	
+	width: 100%;
+	// background-color: #6fb5d1;
+
+// about me & social media
+	.content-block {
+		.custom-layout(column, space-evenly);
+		.default-spacing();
+		.bordered(@right-color);
+
+		@media (max-width: 500px) {
+			align-items: center;
+		}
+		
+	}	
+
+}
+
+// contact
+
+.contact {
+	.custom-layout(column, space-evenly);
+	// align-items: center;
+	.default-spacing();
+	width: 100%;
+
+	.contact-info {
+		.custom-layout(row, space-around);
+		width: 100%;
+		.bordered(@right-color);
+
+		.content-block {
+			margin: 1rem 0;
+			width: 50%;
+		}
+
+	}
+
+	@media (max-width: 500px) {
+		align-items: center;
+		.contact-info {
+			.custom-layout(column, center);
+			align-items: center;
+			.content-block {
+				width: 75%;
+			}
+		}
+	}
+	
+}
+
+	// main
+
+	.main {
+		.custom-layout(column, space-between);
+		align-items: flex-start;
+		margin: 2rem 1rem;
+		// height: 95%;
+		// .custom-layout(column, space-evenly);
+		// 	margin: 1rem 0;
+			// .bordered(@right-color);
+			//.help;		
+
+		.organization {
+			.custom-layout(row, space-around);
+			margin: 1rem 0;
+
+			.org-name {
+				//.help;
+				margin: 1rem 0;
+				width: 33%;
+				}
+
+			.org-description {				
+				//.help;
+				margin: 1rem 0;
+				width: 66%;
+				}
+
+			@media (max-width: 500px) {				
+				.custom-layout(column, space-evenly);
+				.organization {
+					.bordered(black);
+				}
+				.org-name {
+					width: 100%;					
+				}
+				.org-description {
+					width: 100%;
+				}
+			}
+		}
+	
+
+		// work history
+
+		.work-history {
+			.default-spacing();
+			.bordered(@right-color);
+		}
+
+		// education
+
+		.education {			
+			.default-spacing();
+			.bordered(@right-color);
+		}
+		
+
+		// skills
+
+		.skills {
+			.default-spacing();
+			width: 100%;
+			.bordered(@right-color);
+
+			ul {
+				padding-top: 1.5rem;
+				list-style-type: disc;
+				list-style-position: inside;
+			}
+		}
+	}
+		// footer
+
+		footer {
+			.custom-layout(row, flex-end);
+			margin-top: 1rem;
+			padding: 1rem 2rem;
+			
+			a {
+				text-decoration: none;
+				color: black;
+			}
+		
+		}
