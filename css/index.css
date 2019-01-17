@@ -283,6 +283,15 @@ header .content-block li {
   .contact {
     align-items: center;
   }
+  .contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact .contact-info .content-block {
+    width: 75%;
+  }
 }
 .main {
   display: flex;
@@ -338,6 +347,7 @@ header .content-block li {
   border-bottom: 1px solid black;
 }
 .main .skills ul {
+  padding-top: 1.5rem;
   list-style-type: disc;
   list-style-position: inside;
 }

@@ -261,6 +261,13 @@ ul {
 
 	@media (max-width: 500px) {
 		align-items: center;
+		.contact-info {
+			.custom-layout(column, center);
+			align-items: center;
+			.content-block {
+				width: 75%;
+			}
+		}
 	}
 	
 }
@@ -331,6 +338,7 @@ ul {
 			.bordered(@right-color);
 
 			ul {
+				padding-top: 1.5rem;
 				list-style-type: disc;
 				list-style-position: inside;
 			}
