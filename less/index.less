@@ -5,9 +5,6 @@
    License: none (public domain)
 */
 
-.help {
-	border: 1px solid red;
-}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -84,6 +81,10 @@ html, body {
 	border-bottom: 1px solid @color;
 }
 
+.help() {
+	border: 1px solid red;
+}
+
 // main css
 
 .container {
@@ -149,7 +150,7 @@ html, body {
 	}
 // about me & social media
 	.content-block {
-		margin-top: 1rem;
+		margin-top: 1rem 1rem 0;
 		padding: 1.5rem;
 		width: 100%;		
 		.bordered(@left-color);
@@ -195,27 +196,46 @@ header {
 
 	.main {
 		.custom-layout(column, space-between);
-		margin: 2rem 1rem;
+		margin: 1rem 1rem;
 
 	}
 
 		// work history
 
-.work-history {
-	
-}
+		.work-history {
+			.custom-layout(column, space-evenly);
+			margin: 1rem 0;
+			.bordered(@right-color);
+			.help;
+			.organization {
+				.custom-layout(row, space-around);
+				.help;
+			}
+		}
+
+		.org-name {
+			.help;
+		}
+
+		.org-description {
+			.help;
+		}
 
 		// education
 
-.education {
-	
-}
+		.education {
+			.custom-layout(column, space-evenly);
+			margin: 1rem 0;
+			.bordered(@right-color);
+			.help;
+		}
 
 		// skills
 
-.skills {
-	
-}
+		.skills {
+			margin: 1rem 0;
+			.bordered(@right-color);
+		}
 
 		// footer
 
