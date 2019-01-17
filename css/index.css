@@ -191,6 +191,16 @@ h4 {
 .navigation nav a:hover {
   font-size: 2rem;
 }
+@media (max-width: 500px) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .navigation nav {
+    width: 80%;
+  }
+}
 header {
   display: flex;
   flex-direction: row;
