@@ -66,7 +66,8 @@ html, body {
 
 
 h1 {
-	font-size: 4rem;
+	font-size: 6rem;
+	font-family: Roboto, sans-serif;
 }
 
 h2 {
@@ -77,9 +78,13 @@ h3 {
 	font-size: 2rem;
 }
 
+ul {
+	.custom-layout(row, space-evenly);
+}
+
 // variables
 
-@left-color: #4592b1;
+@left-color: #6fb5d1;
 @right-color: black;
 
 // mix-ins
@@ -141,7 +146,7 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	background-color: #267391;
+	background-color: #4b8faa;
 	width: 33%;
 	height: 100vh;
 
@@ -152,18 +157,19 @@ h3 {
 		padding: 2rem;
 		width: 100%;
 		// height: 25%;
-		.bordered(@left-color);
+		// .bordered(@left-color);
 
 		img {
 			display: block;
 			margin: 1rem auto;
 			border-radius: 50%;
-			width: 100%;
+			width: 80%;
+			.bordered(@left-color);
 		}
 	}
 // about me & social media
 	.content-block {
-		margin-top: 1rem 1rem 0;
+		margin: 1rem 1rem 1rem 0;
 		padding: 1.5rem;
 		width: 100%;		
 		.bordered(@left-color);
@@ -177,7 +183,7 @@ h3 {
 	background-color: aliceblue;
 	.custom-layout(column, space-between);
 	width: 66%;
-	height: 100%
+	height: 100%;
 	
 }
 
@@ -185,14 +191,21 @@ h3 {
 
 header {
 	.custom-layout(row, space-between);
+	align-items: flex-start;
 	margin: 1rem;
-	padding: 1rem 2rem;
+	margin-top: 2rem;
+	padding: 0 2rem;
+	padding-bottom: 3rem;
 	.bordered(@right-color);
 	
 
 	.content-block {
+		h1 {
+			line-height: 1;
+			color: #4b8faa;
+		}
 		li {
-		line-height: 1.5;
+		margin-top: 1rem;
 		}
 	}
 }
@@ -206,44 +219,46 @@ header {
 
 	.main {
 		.custom-layout(column, space-between);
-		margin: 1rem 1rem;
+		align-items: flex-start;
+		margin: 2rem 1rem;
+		height: 95%;
+		// .custom-layout(column, space-evenly);
+		// 	margin: 1rem 0;
+			// .bordered(@right-color);
+			//.help;		
 
+		.organization {
+			.custom-layout(row, space-around);
+			margin: 1rem 0;
+
+			.org-name {
+				//.help;
+				width: 33%;
+				}
+
+			.org-description {
+				//.help;
+				width: 66%;
+				}
+		}
 	}
 
 		// work history
 
 		.work-history {
-			.custom-layout(column, space-evenly);
-			margin: 1rem 0;
 			.bordered(@right-color);
-			.help;
-			.organization {
-				.custom-layout(row, space-around);
-				.help;
-			}
-		}
-
-		.org-name {
-			.help;
-		}
-
-		.org-description {
-			.help;
 		}
 
 		// education
 
-		.education {
-			.custom-layout(column, space-evenly);
-			margin: 1rem 0;
+		.education {			
 			.bordered(@right-color);
-			.help;
 		}
+		
 
 		// skills
 
 		.skills {
-			margin: 1rem 0;
 			.bordered(@right-color);
 		}
 

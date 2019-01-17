@@ -138,13 +138,19 @@ body {
   font-size: 62.5%;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
+  font-family: Roboto, sans-serif;
 }
 h2 {
   font-size: 2.5rem;
 }
 h3 {
   font-size: 2rem;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 .container {
   display: flex;
@@ -180,7 +186,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #267391;
+  background-color: #4b8faa;
   width: 33%;
   height: 100vh;
 }
@@ -189,19 +195,19 @@ h3 {
   position: relative;
   padding: 2rem;
   width: 100%;
-  border-bottom: 1px solid #4592b1;
 }
 .intro .headshot img {
   display: block;
   margin: 1rem auto;
   border-radius: 50%;
-  width: 100%;
+  width: 80%;
+  border-bottom: 1px solid #6fb5d1;
 }
 .intro .content-block {
-  margin-top: 1rem 1rem 0;
+  margin: 1rem 1rem 1rem 0;
   padding: 1.5rem;
   width: 100%;
-  border-bottom: 1px solid #4592b1;
+  border-bottom: 1px solid #6fb5d1;
 }
 .right-side {
   background-color: aliceblue;
@@ -215,49 +221,47 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 1rem;
-  padding: 1rem 2rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
+  padding-bottom: 3rem;
   border-bottom: 1px solid black;
 }
+header .content-block h1 {
+  line-height: 1;
+  color: #4b8faa;
+}
 header .content-block li {
-  line-height: 1.5;
+  margin-top: 1rem;
 }
 .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 1rem 1rem;
+  align-items: flex-start;
+  margin: 2rem 1rem;
+  height: 95%;
 }
-.work-history {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 1rem 0;
-  border-bottom: 1px solid black;
-  border: 1px solid red;
-}
-.work-history .organization {
+.main .organization {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  border: 1px solid red;
+  margin: 1rem 0;
 }
-.org-name {
-  border: 1px solid red;
+.main .organization .org-name {
+  width: 33%;
 }
-.org-description {
-  border: 1px solid red;
+.main .organization .org-description {
+  width: 66%;
+}
+.work-history {
+  border-bottom: 1px solid black;
 }
 .education {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  margin: 1rem 0;
   border-bottom: 1px solid black;
-  border: 1px solid red;
 }
 .skills {
-  margin: 1rem 0;
   border-bottom: 1px solid black;
 }
 footer {
